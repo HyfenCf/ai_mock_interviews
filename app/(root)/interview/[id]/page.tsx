@@ -6,8 +6,7 @@ import DisplayTechIcons from "@/components/DisplayTechIcons";
 import Agent from "@/components/Agent";
 import { getCurrentUser } from "@/lib/actions/auth.action";
 
-const Page = async (context: RouteParams) => {
-  const { params } = await context;
+const Page = async ({ params }: RouteParams) => {
   const { id } = params;
   const user = await getCurrentUser();
   const interview = await getInterviewById(id);
